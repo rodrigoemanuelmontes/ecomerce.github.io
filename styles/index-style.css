@@ -61,7 +61,6 @@ nav {
     display: flex;
     justify-content: center;
     margin: 20px 0;
-
 }
 
 .search-form input {
@@ -80,22 +79,16 @@ nav {
     margin-left: 5px;
 }
 
-.principalproducts {
+.product-list {
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap; /* Permite que los productos se ajusten a la siguiente fila */
+    flex-wrap: wrap;
+    justify-content: center; /* Centrar productos */
+    width: 100%;
     padding: 10px; 
 }
 
-.product-list {
-    display: flex;
-    flex-wrap: wrap; /* Asegúrate de que los productos se ajusten a nuevas filas */
-    justify-content: space-between; /* Espacio entre filas */
-    width: 100%; /* Asegúrate de que ocupe el ancho completo */
-}
-
 .product {
-    flex: 0 1 calc(25% - 20px); /* Cada producto ocupa el 25% del ancho, menos el margen */
+    flex: 1 1 calc(25% - 20px); /* Cada producto ocupa el 25% del ancho, menos el margen */
     margin: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -103,11 +96,11 @@ nav {
     text-align: center;
     background: #fff;
     transition: box-shadow 0.3s;
-    box-sizing: border-box; /* Incluye padding y border en el ancho total */
+    box-sizing: border-box;
 }
 
 .product img {
-    width: 100px;
+    max-width: 100%; /* Asegura que la imagen sea responsiva */
     height: auto;
 }
 
@@ -116,121 +109,90 @@ nav {
 }
 
 .footer-content {
-    background: #000000;
+    background: #000;
     color: white;
     text-align: center;
     padding: 20px;
-    position: relative;
-    display: flex;
-    flex-direction: column; /* Asegúrate de que el título y el texto estén en columna */
-    align-items: center; /* Centra los elementos */
 }
 
 .footer-content p {
-    margin: 5px 0; /* Espacio entre los párrafos */
+    margin: 5px 0;
 }
 
 .social-media {
-    display: flex; /* Usar flexbox para alinear social media horizontalmente */
-    justify-content: center; /* Centra los enlaces */
-    margin-top: 10px; /* Espacio superior */
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
 }
 
 .social-media a {
     color: white;
-    margin: 0 10px; /* Espacio entre enlaces */
+    margin: 0 10px;
     text-decoration: none;
 }
 
 .social-media a:hover {
-    text-decoration: underline; /* Subraya al pasar el mouse */
+    text-decoration: underline;
 }
 
 
-.reviews {
-    background: #f9f9f9; /* Fondo claro para la sección de reseñas */
-    padding: 20px;
-    text-align: center;
+.review {
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 15px;
+    margin: 10px;
+    width: 250px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
-.review img{
+
+.review img {
     max-height: 40px;
     max-width: auto;
-    justify-content: center;
+    display: block; /* Asegura que la imagen esté centrada */
+    margin: 0 auto; /* Centra la imagen */
 }
-
 .review-list {
-    display: flex; /* Cambia a flex para alinear horizontalmente */
-    justify-content: center; /* Centra las reseñas en el contenedor */
-    flex-wrap: wrap; /* Permite que las reseñas se ajusten a la siguiente fila si no hay espacio */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centrar las reseñas */
+    padding: 10px; /* Opcional: Espaciado alrededor */
 }
 
 .review {
-    background: #fff; /* Fondo blanco para cada reseña */
-    border: 1px solid #ccc; /* Borde sutil */
-    border-radius: 5px; /* Bordes redondeados */
-    padding: 15px;
-    margin: 10px; /* Espacio entre reseñas */
-    width: 250px; /* Ancho fijo para las reseñas */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    flex: 1 1 calc(30% - 20px); /* Cada reseña ocupa aproximadamente el 30% del ancho */
+    margin: 10px;
+    box-sizing: border-box; /* Asegura que el padding y margen no afecten el tamaño total */
 }
 
-.review h3 {
-    margin: 0;
-    color: #333; /* Color del nombre */
-}
-
-.review p {
-    margin: 5px 0; /* Espacio entre párrafos */
-}
-
-
-
-.videosmuestra {
-    background: #f9f9f9; /* Fondo claro para la sección de reseñas */
-    padding: 20px;
-    text-align: center;
-}
-.videosmuestra iframe{
-    max-height: 400px;
-    max-width: auto;
-    justify-content: center;
-}
 
 .videos-list {
-    display: flex; /* Cambia a flex para alinear horizontalmente */
-    justify-content: center; /* Centra las reseñas en el contenedor */
-    flex-wrap: wrap; /* Permite que las reseñas se ajusten a la siguiente fila si no hay espacio */
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .videosmuestra {
-    background: #fff; 
-    border: 1px solid #ccc; 
-    border-radius: 5px; 
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
     padding: 15px;
-    margin: 10px; 
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+    margin: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.videos h2 {
-    text-align: center;
-    margin: 0;
-    color: #333;
-    font-size: 40px;
+.videosmuestra iframe {
+    max-width: 100%; /* Asegura que el iframe sea responsivo */
+    height: auto; /* Mantiene la proporción */
 }
-
-.videos p {
-    margin: 5px 0; /* Espacio entre párrafos */
-}
-
-
 
 @media (max-width: 600px) {
     .nav-list {
-        display: none; /* Oculta la lista de navegación por defecto */
-        flex-direction: column; /* Muestra en columna */
-        position:absolute;
+        display: none;
+        flex-direction: column;
+        position: absolute;
         text-align: center;
-        top: 75px; /* Ajusta según la altura del header */
+        top: 75px;
         right: 0;
         background: black;
         width: 100%;
@@ -238,14 +200,14 @@ nav {
     }
 
     .nav-list.active {
-        display: flex; /* Muestra la lista cuando está activa */
+        display: flex;
     }
 
     .menu-toggle {
-        display: flex; /* Muestra el botón de menú hamburguesa */
+        display: flex;
     }
 
     .product {
-        flex: 1 0 100%; /* Los productos ocupan todo el ancho en pantallas pequeñas */
+        flex: 1 1 100%; /* Los productos ocupan todo el ancho en pantallas pequeñas */
     }
 }
