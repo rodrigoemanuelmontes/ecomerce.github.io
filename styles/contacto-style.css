@@ -1,0 +1,155 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f4f4f4;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: black;
+    color: white;
+    padding: 10px 20px;
+}
+
+header img {
+    width: 80px;
+    height: 60px;
+}
+
+h1 {
+    margin: 0;
+    flex-grow: 1;
+    text-align: center;
+}
+nav {
+    position: relative;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+.nav-list li {
+    display: inline;
+}
+
+.nav-list a {
+    color: white;
+    text-decoration: none;
+}
+
+.customer-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 120px); /* Ajusta el alto para centrar en la pantalla */
+}
+
+.form-container {
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 400px; /* Ancho máximo del formulario */
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background: black;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #333; /* Color al pasar el mouse */
+}
+
+#error-msg {
+    color: red;
+    display: none; /* Ocultar mensaje de error por defecto */
+    margin-top: 10px;
+}
+
+
+.footer-content {
+    background: #000000;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    display: flex;
+    flex-direction: column; /* Asegúrate de que el título y el texto estén en columna */
+    align-items: center; /* Centra los elementos */
+
+}
+
+.footer-content p {
+    margin: 5px 0; /* Espacio entre los párrafos */
+}
+.social-media {
+    display: flex; /* Usar flexbox para alinear social media horizontalmente */
+    justify-content: center; /* Centra los enlaces */
+    margin-top: 10px; /* Espacio superior */
+}
+
+.social-media a {
+    color: white;
+    margin: 0 10px; /* Espacio entre enlaces */
+    text-decoration: none;
+}
+
+.social-media a:hover {
+    text-decoration: underline; /* Subraya al pasar el mouse */
+}
+
+
+
+@media (max-width: 600px) {
+    .nav-list {
+        display: none; /* Oculta la lista de navegación por defecto */
+        flex-direction: column; /* Muestra en columna */
+        position:absolute;
+        text-align: center;
+        top: 75px; /* Ajusta según la altura del header */
+        right: 0;
+        background: black;
+        width: 100%;
+        color: white;
+    }
+
+    .nav-list.active {
+        display: flex; /* Muestra la lista cuando está activa */
+    }
+
+    .menu-toggle {
+        display: flex; /* Muestra el botón de menú hamburguesa */
+    }
+    .form-container {
+        width: 90%; /* Ajustar el ancho en pantallas pequeñas */
+    }
+}
