@@ -34,26 +34,21 @@
         <section class="customer-info">
             <div class="form-container">
                 <h1>Información del Cliente</h1>
-                <form id="cliente-form">
-                    <div class="form-group">
-                        <label for="nombre">Nombre:</label>
-                        <input type="text" id="nombre" name="nombre" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="apellido">Apellido:</label>
-                        <input type="text" id="apellido" name="apellido" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="telefono">Teléfono:</label>
-                        <input type="tel" id="telefono" name="telefono" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email:</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                    <button type="button" id="enviar-pedido-btn">Enviar Pedido</button>
-                    <p id="error-msg" class="error-msg">Por favor, completa todos los campos antes de continuar.</p>
-                </form>
+                <form
+                action="https://formspree.io/f/xanyedke"
+                method="POST"
+              >
+                <label>
+                  Your email:
+                  <input type="email" name="email">
+                </label>
+                <label>
+                  Your message:
+                  <textarea name="message"></textarea>
+                </label>
+                <!-- your other form fields go here -->
+                <button type="submit">Send</button>
+              </form>
             </div>
         </section>
         
