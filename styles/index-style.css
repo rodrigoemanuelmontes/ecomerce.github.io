@@ -127,22 +127,27 @@ nav {
     text-decoration: none;
 }
 
-.reviews{
-    width: auto;
-    text-align: center;
-    
+.reviews {
+    width: 100%;
+    text-align: center;    
 }
 
 .review-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(50%, 1fr));
-    gap: 10px;
-    justify-content: center;
+    display: flex;
+    overflow-x: auto; 
+    scroll-snap-type: x mandatory; 
+}
+
+.review {
+    min-width: 300px; 
+    margin: 10px;
+    flex: 0 0 auto; 
+    scroll-snap-align: start; 
 }
 
 .review img {
-    width: 50px;
-    height: 50px;
+    width: 100px;
+    height: 100px;
     border-radius: 50%;
 }
 
@@ -152,8 +157,9 @@ nav {
     gap: 20px;
 }
 
-.videosmuestra {
+.videosmuestra, h2 {
     text-align: center;
+    font-family: Arial, sans-serif;
 }
 
 @media (max-width: 768px) {
