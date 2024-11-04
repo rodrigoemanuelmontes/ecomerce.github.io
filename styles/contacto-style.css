@@ -24,6 +24,7 @@ h1 {
     flex-grow: 1;
     text-align: center;
 }
+
 nav {
     position: relative;
 }
@@ -68,11 +69,15 @@ label {
     margin-bottom: 5px;
 }
 
-input {
+input, textarea {
     width: 100%;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
+}
+
+textarea {
+    resize: vertical; /* Permitir el redimensionamiento vertical */
 }
 
 button {
@@ -95,22 +100,17 @@ button:hover {
     margin-top: 10px;
 }
 
-
 .footer-content {
-    background: #000000;
+    background: #000;
     color: white;
     text-align: center;
     padding: 20px;
-    position: relative;
-    display: flex;
-    flex-direction: column; /* Asegúrate de que el título y el texto estén en columna */
-    align-items: center; /* Centra los elementos */
-
 }
 
 .footer-content p {
-    margin: 5px 0; /* Espacio entre los párrafos */
+    margin: 5px 0;
 }
+
 .social-media {
     display: flex; /* Usar flexbox para alinear social media horizontalmente */
     justify-content: center; /* Centra los enlaces */
@@ -127,13 +127,11 @@ button:hover {
     text-decoration: underline; /* Subraya al pasar el mouse */
 }
 
-
-
 @media (max-width: 600px) {
     .nav-list {
         display: none; /* Oculta la lista de navegación por defecto */
         flex-direction: column; /* Muestra en columna */
-        position:absolute;
+        position: absolute;
         text-align: center;
         top: 75px; /* Ajusta según la altura del header */
         right: 0;
@@ -149,6 +147,7 @@ button:hover {
     .menu-toggle {
         display: flex; /* Muestra el botón de menú hamburguesa */
     }
+
     .form-container {
         width: 90%; /* Ajustar el ancho en pantallas pequeñas */
     }
