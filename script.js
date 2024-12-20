@@ -2,7 +2,8 @@
 
 // Función para cargar el archivo JSON con los productos
 function cargarProductos() {
-    fetchfetch('/productos.json')
+    fetch('/ecomerce.github.io/productos.json')
+
         .then(response => response.json())
         .then(data => {
             productos = data;  
