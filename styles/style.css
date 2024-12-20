@@ -1,0 +1,337 @@
+/* Estilo Body general */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f4f4f4;
+    overflow-x: hidden; 
+}
+/* Prevención de desbordamientos horizontales */
+html, body{
+    width: 100%;
+    overflow-x: hidden; 
+}
+/* Estilo de la navbar  ya que no lo pude cambiar de otra forma*/
+.navbar-dark.bg-dark {
+    background-color: #000000 !important;
+}
+
+.navbar-brand img {
+    max-width: 100%;
+    height: auto;
+    max-width: 50px;
+}
+
+/* Estilo del botón de menú en móvil */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.bar {
+    height: 3px;
+    width: 25px;
+    background: white;
+    margin: 4px 0;
+}
+
+/* Estilo del formulario de búsqueda */
+.search-form {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+    flex-wrap: wrap; 
+}
+
+.search-form input,
+.search-form select,
+.search-form button {
+    padding: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    margin-right: 5px;
+    width: auto; 
+}
+
+/* Estilo responsivo de los form*/
+@media (max-width: 768px) {
+    .search-form input,
+    .search-form select,
+    .search-form button {
+        width: 100%; 
+        margin-bottom: 10px; 
+    }
+
+    .search-form {
+        flex-direction: column;
+        align-items: center; 
+    }
+}
+
+/* Estilo de la lista de productos */
+.product-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 10px;
+    padding: 10px;
+}
+
+/* Estilo de los productos */
+.product {
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+    transition: box-shadow 0.3s;
+}
+
+.product img {
+    max-width: 100%;
+    height: auto;
+}
+
+.product:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo del footer */
+.footer-content {
+    background: #000;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.footer-content p {
+    margin: 5px 0;
+}
+
+.social-media {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.social-media a {
+    margin: 0 10px;
+    color: white;
+    text-decoration: none;
+}
+
+/* Estilo de las reseñas */
+.reviews {
+    width: 100%;
+    text-align: center; 
+    font-family: 'Comic Neue', sans-serif;
+    font-size: 16px;
+}
+
+.review-list {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+}
+
+.review {
+    min-width: 300px;
+    margin: 10px;
+    flex: 10 5 auto;
+    scroll-snap-align: start;
+}
+
+.review img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+/* Estilo de los videos */
+.videos-list {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+}
+
+.videosmuestra
+ {
+   
+    font-family: 'Comic Neue', sans-serif;
+    font-size: 20px;
+  
+}
+
+
+/* Responsividad para pantallas pequeñas */
+@media (max-width: 768px) {
+    
+    .navbar-collapse {
+        width: 100%;
+    }
+
+    .navbar-nav {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .navbar-nav .nav-item {
+        text-align: center;
+        width: 100%;
+    }
+
+    /* Estilo de los productos en pantallas pequeñas */
+    .product-list {
+        grid-template-columns: 1fr 1fr;
+        padding: 0 10px;
+    }
+
+    .col-12, .col-sm-6, .col-md-4, .col-lg-3 {
+        flex: 1 0 100%;
+        max-width: 100%;
+    }
+
+    /* Ajuste para los videos */
+    .videosmuestra {
+     
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/*Estilos para el consumo de dolar api*/
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  table, th, td {
+    border: 1px solid black;
+  }
+
+  th {
+
+    color:white;
+    background-color: #000000;
+  }
+
+  /* Estilos para la sección de contacto */
+.customer-info {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    min-height: 100vh; 
+    background-color: #f7f7f7; 
+    padding: 20px;
+}
+
+.form-container {
+    background-color: #333; 
+    color: white; 
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 600px; 
+}
+
+.form-container h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: #000000; 
+    color: #fff; 
+    font-size: 16px;
+}
+
+.form-group textarea {
+    resize: vertical; 
+    height: 150px; 
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #ccc; 
+}
+
+/* Estilo para el botón de envío */
+button[type="submit"] {
+    width: 50%; 
+    padding: 12px;
+    background-color: #007bff; 
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Estilo para el checkbox */
+.form-group input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+/* Estilo para el enlace de los términos y condiciones */
+.form-group a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.form-group a:hover {
+    text-decoration: underline;
+}
+
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 768px) {
+    .form-container {
+        padding: 20px;
+        width: 100%; 
+    }
+
+    .form-container h1 {
+        font-size: 20px;
+    }
+
+    .form-group input,
+    .form-group textarea,
+    button[type="submit"] {
+        padding: 10px;
+        font-size: 16px; 
+    }
+
+    .form-group textarea {
+        height: 120px; 
+    }
+}
+
+/* Estilo de los mensajes de error */
+#error-msg {
+    color: red;
+    font-size: 14px;
+    text-align: center;
+    margin-top: 10px;
+}

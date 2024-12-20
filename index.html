@@ -4,168 +4,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/index-style.css">
+    <link rel="stylesheet" href="styles/style.css">
     <title>E-Commerce de Tecnología</title>
+    <!-- Usando solo Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!--Importo una tipografía de google font para implementarla en la parte de videosmuestra y los h2-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <header>
-        <a href="index.html"><img src="img/logo.png" alt="Logo"></a>
-        <h1>Tienda Tecnológica</h1>
-        <nav>
-            <div class="menu-toggle" id="mobile-menu">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html"><img src="img/logo.png" alt="logo"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mx-auto"> 
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#productoContainer">Productos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contacto.html">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-            <ul class="nav-list">
-                <li><a href="#">Inicio</a></li>
-                <li><a href="#product-list">Productos</a></li>
-                <li><a href="#reviews">Reseñas</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-            </ul>
         </nav>
     </header>
-    
 
 
-    <main>
-        <form id="searchForm" class="search-form">
-            <input type="text" id="buscador" placeholder="Buscar productos...">
-            <select id="tipoProducto">
-                <option value="">Filtrar por tipo</option>
-                <option value="monitores">Monitores</option> 
-                <option value="placas">Placas</option>
-                <option value="discosSSD">Discos SSD</option>
-                <option value="perifericos">Periféricos</option>
-            </select>
-            <label for="ordenarPrecio">Ordenar por precio:</label>
-            <select id="ordenarPrecio">
-                <option value="menor">Menor a mayor</option>
-                <option value="mayor">Mayor a menor</option>
-            </select>
-            <button type="submit">Buscar</button>
-        </form>
+    <table id="dolar-table">
+        <thead>
 
-        <div id="product-list" class="product-list">
-            <div class="product">
-                <img src="img/monitorlg.jfif" alt="Producto 1">
-                <h2>Monitor LG UltraWide de 34" QHD</h2>
-                <p>Disfruta de un amplio espacio de trabajo con una resolución QHD y diseño ergonómico.</p>
-                <p><strong>Precio: $699.999,00</strong></p>
-            </div>
-            <div class="product">
-                <img src="img/ram-gskill.png" alt="Producto 2">
-                <h2>Memoria RAM G.Skill 32GB DDR4 3600Mhz Ripjaws</h2>
-                <p>Capacidad: 32GB</p>
-                <p>Velocidad: 3600Mhz</p>
-                <p><strong>Precio: $149.999,00</strong></p>
-            </div>
-    
-            <div class="product">
-                <img src="img/AMD Radeon RX 6800 XT 16GB.png" alt="Producto 4">
-                <h2>AMD Radeon RX 6800 XT 16GB</h2>
-                <p>Arquitectura RDNA 2</p>
-                <p>Boost: 2360 MHz</p>
-                <p><strong>Precio: $1.299.999,00</strong></p>
-            </div>
-            <div class="product">
-                <img src="img/Mouse Inalámbrico Logitech MX Master 3.jfif" alt="Producto 6">
-                <h2>Mouse Inalámbrico Logitech MX Master 3</h2>
-                <p>Diseño ergonómico con múltiples botones programables y conexión Bluetooth.</p>
-                <p><strong>Precio: $119.999,00</strong></p>
-            </div>
-            <div class="product">
-                <img src="img/Auriculares Sony WH-1000XM4.jpg" alt="Producto 7">
-                <h2>Auriculares Sony WH-1000XM4</h2>
-                <p>Cancelación de ruido activa y calidad de sonido superior.</p>
-                <p><strong>Precio: $349.999,00</strong></p>
-            </div>
-            <div class="product">
-                <img src="img/Placa Base ASUS ROG Strix B550-F.jpg" alt="Producto 8">
-                <h2>Placa Base ASUS ROG Strix B550-F</h2>
-                <p>Compatible con procesadores AMD Ryzen y con soporte para PCIe 4.0.</p>
-                <p><strong>Precio: $199.999,00</strong></p>
-            </div>
-            <div class="product">
-                <img src="img/Fuente de Poder Corsair RM750x 750W.png" alt="Producto 9">
-                <h2>Fuente de Poder Corsair RM750x 750W</h2>
-                <p>Fuente modular con certificación 80 Plus Gold.</p>
-                <p><strong>Precio: $109.999,00</strong></p>
-            </div>
-            <div class="product">
-                <img src="img/Cámara Web Logitech C920 HD Pro.jfif" alt="Producto 10">
-                <h2>Cámara Web Logitech C920 HD Pro</h2>
-                <p>Graba en Full HD 1080p con audio estéreo.</p>
-                <p><strong>Precio: $79.999,00</strong></p>
-            </div>
-            <div class="product">
-                <img src="img/Soporte para Monitor de Escritorio ajustable.jpg" alt="Producto 11">
-                <h2>Soporte para Monitor de Escritorio ajustable</h2>
-                <p>Permite ajustar la altura y la inclinación del monitor.</p>
-                <p><strong>Precio: $29.999,00</strong></p>
-            </div>
-            <div class="product">
-                <img src="img/Cable HDMI 2.1 de 2 metros.jpg" alt="Producto 12">
-                <h2>Cable HDMI 2.1 de 2 metros</h2>
-                <p>Compatible con 4K y 8K, ideal para gaming y streaming.</p>
-                <p><strong>Precio: $15.999,00</strong></p>
-            </div>
-            <div class="product">
-                <img src="img/Micrófono Blue Yeti USB.jpg" alt="Producto 13">
-                <h2>Micrófono Blue Yeti USB</h2>
-                <p>Calidad de grabación profesional, ideal para streaming y podcasts.</p>
-                <p><strong>Precio: $189.999,00</strong></p>
-            </div>
-            <div class="product">
-                <img src="img/Ventilador de PC Corsair ML120 Pro.jpg" alt="Producto 14">
-                <h2>Ventilador de PC Corsair ML120 Pro</h2>
-                <p>Flujo de aire optimizado y funcionamiento silencioso.</p>
-                <p><strong>Precio: $29.999,00</strong></p>
-            </div>
-            <div class="product">
-                <img src="img/Almohadilla Gaming Razer Goliathus.jpg" alt="Producto 15">
-                <h2>Almohadilla Gaming Razer Goliathus</h2>
-                <p>Superficie textil optimizada para un movimiento rápido y preciso.</p>
-                <p><strong>Precio: $19.999,00</strong></p>
-            </div>
-            <div class="product">
-                <img src="img/Monitor Samsung Odyssey G7 de 27.jfif" alt="Producto 16">
-                <h2>Monitor Samsung Odyssey G7 de 27"</h2>
-                <p>Curvo y con frecuencia de actualización de 240Hz para un juego fluido.</p>
-                <p><strong>Precio: $799.999,00</strong></p>
-            </div>
-            <div class="product">
-                <img src="img/Tablet Samsung Galaxy Tab S7.jpg" alt="Producto 17">
-                <h2>Tablet Samsung Galaxy Tab S7</h2>
-                <p>Pantalla de 11" y procesador Snapdragon 865+ para rendimiento superior.</p>
-                <p><strong>Precio: $399.999,00</strong></p>
-            </div>
-            <div class="product">
-                <img src="img/Raspberry Pi 4 Modelo B - 4GB RAM.jpg" alt="Producto 18">
-                <h2>Raspberry Pi 4 Modelo B - 4GB RAM</h2>
-                <p>Mini computadora versátil para proyectos de electrónica y programación.</p>
-                <p><strong>Precio: $69.999,00</strong></p>
-            </div>
-            <div class="product">
-                <img src="img/Smartwatch Amazfit GTS 2.jfif" alt="Producto 19">
-                <h2>Smartwatch Amazfit GTS 2</h2>
-                <p>Monitoreo de salud y múltiples modos de deporte con GPS integrado.</p>
-                <p><strong>Precio: $129.999,00</strong></p>
-            </div>
-            <div class="product">
-                <img src="img/Lector de Tarjetas SD UGREEN USB 3.0.jfif" alt="Producto 20">
-                <h2>Lector de Tarjetas SD UGREEN USB 3.0</h2>
-                <p>Compatible con múltiples formatos de tarjetas y alta velocidad de transferencia.</p>
-                <p><strong>Precio: $19.999,00</strong></p>
-            </div>
-        </div>
-        
-        
-        
-   
+            <tr>
+                <th>Moneda</th>
+                <th>Compra</th>
+                <th>Venta</th>
+                <th>Casa</th>
 
-    </main>
+            </tr>
+        </thead>
+        <tbody>
+            
+        </tbody>
+    </table>
+
+
+    <form id="searchForm" class="search-form">
+        <input type="text" id="buscador" placeholder="Buscar productos...">
+        <select id="tipoProducto">
+            <option value="">Filtrar por tipo</option>
+            <option value="monitores">Monitores</option>
+            <option value="placas">Placas</option>
+            <option value="discosSSD">Discos SSD</option>
+            <option value="perifericos">Periféricos</option>
+        </select>
+
+        <select id="ordenarPrecio">
+            <option value="menor">Menor a mayor</option>
+            <option value="mayor">Mayor a menor</option>
+        </select>
+        <button type="submit">Buscar</button>
+    </form>
+
+    <div class="productos row" id="productoContainer">
+       
+    </div>
+
 
     <section id="reviews" class="reviews">
         <h2>Reseñas de Clientes</h2>
@@ -190,46 +104,42 @@
             </div>
         </div>
     </section>
-    
-   
-</div>
-    </section>
 
 
-    <section id="videosmuestra" class ="videos">
-        <h2>videos sobre tecnología que podrían interesarte</h2>
+    <section id="videosmuestra" class="videos">
+        <h2>Videos sobre tecnología que podrían interesarte</h2>
         <div class="videos-list">
-
             <div class="videosmuestra">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/YwuBh6SazaA?si=gm2JRpAWLAnHe_dT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                 <h3>Elegir el procesador ideal en 2024</h3>
-                 <p>Video instructivo que te ayudará a elegir el mejor procesador para tu pc.</p>
-             </div>
-             <div class="videosmuestra">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/9hmnWZvGk5I?si=KWr2ubSagBCOGB3O" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                 <h3>Laptops para programación en 2025</h3>
-                 <p>Video instructivo que te ayudará a elegir una buena  laptop.</p>
-             </div>
-
-             <div class="videosmuestra">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/3tppl5kNgaI?si=7ERHmlbgR_6CUNqp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                 <h3>Presupuesto para pc económica 2024</h3>
-                 <p>Video instructivo que te ayudará a elegir una computadora económica para jugar este año.</p>
-             </div>
-
-
-
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/YwuBh6SazaA?si=gm2JRpAWLAnHe_dT"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <h3>Elegir el procesador ideal en 2024</h3>
+                <p>Video instructivo que te ayudará a elegir el mejor procesador para tu pc.</p>
+            </div>
+            <div class="videosmuestra">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/9hmnWZvGk5I?si=KWr2ubSagBCOGB3O"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <h3>Laptops para programación en 2025</h3>
+                <p>Video instructivo que te ayudará a elegir una buena laptop.</p>
+            </div>
+            <div class="videosmuestra">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/3tppl5kNgaI?si=7ERHmlbgR_6CUNqp"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <h3>Presupuesto para pc económica 2024</h3>
+                <p>Video instructivo que te ayudará a elegir una computadora económica para jugar este año.</p>
+            </div>
         </div>
-
-
     </section>
-
 
     <footer>
         <div class="footer-content">
             <h3>Contáctanos</h3>
             <p>Email: info@tiendatecnologica.com | Teléfono: (123) 456-7890</p>
-
             <div class="social-media">
                 <a href="#">Facebook</a>
                 <a href="#">Instagram</a>
@@ -238,8 +148,8 @@
         </div>
     </footer>
 
-
-    <script src="/primer desafío/INTEGRADOR-RODRIGO MONTES/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>

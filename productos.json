@@ -1,0 +1,120 @@
+[
+    {
+      "id": 1,
+      "nombre": "Monitor LG UltraWide de 34",
+      "descripcion": "Disfruta de un amplio espacio de trabajo con una resolución QHD y diseño ergonómico",
+      "precio": 699999,
+      "stock": false,
+      "imagen": "img/monitorlg.jfif",
+      "tipo": "monitores"
+    },
+    {
+      "id": 2,
+      "nombre": "Memoria RAM G.Skill 32GB DDR4 3600Mhz Ripjaws",
+      "descripcion": "Capacidad: 32GB. Velocidad: 3600Mhz",
+      "precio": 79999,
+      "stock": true,
+      "imagen": "img/ram-gskill.png",
+      "tipo": "perifericos"
+    },
+    {
+      "id": 3,
+      "nombre": "AMD Radeon RX 6800 XT 16GB",
+      "descripcion": "Arquitectura RDNA 2",
+      "precio": 999999,
+      "stock": true,
+      "imagen": "img/AMD-Radeon-RX-6800-XT-16GB.png",
+      "tipo": "placas"
+    },
+    {
+      "id": 4,
+      "nombre": "Mouse Inalámbrico Logitech MX Master 3",
+      "descripcion": "Diseño ergonómico con múltiples botones programables y conexión Bluetooth.",
+      "precio": 199000,
+      "stock": true,
+      "imagen": "img/Mouse-Logitech.jfif",
+      "tipo": "perifericos"
+    },
+    {
+      "id": 5,
+      "nombre": "Auriculares Sony WH-1000XM4",
+      "descripcion": "Cancelación de ruido activa y calidad de sonido superior.",
+      "precio": 349999,
+      "stock": true,
+      "imagen": "img/Auriculares-Sony.jpg",
+      "tipo": "perifericos"
+    },
+    {
+      "id": 6,
+      "nombre": "Placa Base ASUS ROG Strix B550-F",
+      "descripcion": "Compatible con procesadores AMD Ryzen y con soporte para PCIe 4.0.",
+      "precio": 199999,
+      "stock": true,
+      "imagen": "img/Placa-Asus.jpg",
+      "tipo": "placas"
+    },
+    {
+      "id": 7,
+      "nombre": "Cámara Web Logitech C920 HD Pro",
+      "descripcion": "Graba en Full HD 1080p con audio estéreo.",
+      "precio": 79999,
+      "stock": true,
+      "imagen": "img/Camara-logitech.jfif",
+      "tipo": "perifericos"
+    },
+    {
+      "id": 8,
+      "nombre": "Soporte para Monitor de Escritorio ajustable",
+      "descripcion": "Permite ajustar la altura y la inclinación del monitor.",
+      "precio": 29999,
+      "stock": true,
+      "imagen": "img/Soporte-Monitor.jpg",
+      "tipo": "monitores"
+    },
+    {
+      "id": 9,
+      "nombre": "Cable HDMI 2.1 de 2 metros",
+      "descripcion": "Compatible con 4K y 8K, ideal para gaming y streaming.",
+      "precio": 15999,
+      "stock": true,
+      "imagen": "img/Cable-Hdmi.jpg",
+      "tipo": "perifericos"
+    },
+    {
+      "id": 10,
+      "nombre": "Micrófono Blue Yeti USB",
+      "descripcion": "Calidad de grabación profesional, ideal para streaming y podcasts.",
+      "precio": 189999,
+      "stock": true,
+      "imagen": "img/Mic-Yeti.jpg",
+      "tipo": "perifericos"
+    },
+    {
+      "id": 11,
+      "nombre": "Ventilador de PC Corsair ML120 Pro",
+      "descripcion": "Flujo de aire optimizado y funcionamiento silencioso.",
+      "precio": 29999,
+      "stock": true,
+      "imagen": "img/Ventilador-Corsair.jpg",
+      "tipo": "perifericos"
+    },
+    {
+      "id": 12,
+      "nombre": "Almohadilla Gaming Razer Goliathus",
+      "descripcion": "Superficie textil optimizada para un movimiento rápido y preciso.",
+      "precio": 19999,
+      "stock": true,
+      "imagen": "img/Almohadilla.jpg",
+      "tipo": "perifericos"
+    },
+    {
+      "id": 13,
+      "nombre": "Monitor Samsung Odyssey G7 de 27 pulgadas",
+      "descripcion": "Curvo y con frecuencia de actualización de 240Hz para un juego fluido.",
+      "precio": 799999,
+      "stock": true,
+      "imagen": "img/Monitor-Samsung.jfif",
+      "tipo": "monitores"
+    }
+  ]
+  

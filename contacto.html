@@ -4,28 +4,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/contacto-style.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <title>E-Commerce de Tecnología - Contacto</title>
 </head>
 
 <body>
     <header>
-        <a href="index.html"><img src="img/logo.png" alt="Logo de la Tienda Tecnológica"></a>
-        <h1>Tienda Tecnológica</h1>
-        <nav>
-            <div class="menu-toggle" id="mobile-menu">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html"><img src="img/logo.png" alt="logo"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mx-auto"> 
+                        <li class="nav-item">
+                            <a class="nav-link active" href="index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html#productoContainer">Productos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contacto.html">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-            <ul class="nav-list">
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="index.html#product-list">Productos</a></li>
-                <li><a href="index.html#reviews">Reseñas</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-            </ul>
         </nav>
     </header>
+    
 
     <main>
         <section class="customer-info">
@@ -34,26 +43,42 @@
                 <form action="https://formspree.io/f/xanyedke" method="POST">
                     <div class="form-group">
                         <label for="name">Nombre:</label>
-                        <input type="name" name="name" id="name" required>
+                        <input type="text" name="name" id="name" required class="form-control">
+                    </div>
+                    <div class="form-group">
                         <label for="email">Tu email:</label>
-                        <input type="email" name="email" id="email" required>
-                        <label for="checkbox">Acepto los <a href="terminos.html"> teminos y condiciones.</a></label>
+                        <input type="email" name="email" id="email" required class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="checkbox">Acepto los <a href="terminos.html">términos y condiciones.</a></label>
                         <input type="checkbox" required>
                     </div>
                     <div class="form-group">
                         <label for="message">Tu mensaje:</label>
-                        <textarea name="message" id="message" required></textarea>
+                        <textarea name="message" id="message" required class="form-control"></textarea>
                     </div>
-                    <button type="submit">Enviar</button>
+                    <button type="submit" class="btn btn-dark w-100">Enviar</button>
                     <p id="error-msg"></p>
                 </form>
             </div>
         </section>
     </main>
 
-    <
+    <footer>
+        <div class="footer-content">
+            <h3>Contáctanos</h3>
+            <p>Email: info@tiendatecnologica.com | Teléfono: (123) 456-7890</p>
+            <div class="social-media">
+                <a href="#">Facebook</a>
+                <a href="#">Instagram</a>
+                <a href="#">Twitter</a>
+            </div>
+        </div>
+    </footer>
 
-    <script src="/primer desafío/INTEGRADOR-RODRIGO MONTES/script.js"></script>
+ 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>
